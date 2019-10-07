@@ -1,0 +1,44 @@
+Avec la grille suivante : ./sudoku "913574268" "247896153" "568312479" "846251397" "529637814"    "731984526"  "183729685"  "692453741"  "47....8.."
+
+Si on essaie de visualiser la récursivité, on obtient ceci : 
+
+Pos : 80 et grid x y : 2
+
+Pos : 79 et grid x y : 3 (on passe à 79 car la position 78 est déja remplie par un 8
+
+Pos : 77 et grid x y : 8
+
+Pos : 76 et grid x y : 6
+
+Pos : 75 et grid x y : 1
+
+Pos : 74 et grid x y : 5
+
+
+La grille envoyée est pleine jusqu'à la position 73 (inclus)
+
+NB : Une récursion DANS un if est très différente d'un if dont la condition est l'appel récursif d'une fonction, exemple :  
+
+Dans un if : 
+
+	if (grid[x][y] != 0)
+    	 return posValid(grid, pos + 1);
+
+If de condition récursive : 
+
+	if (posValid(grid, pos + 1))
+	{
+		return (1);
+	}
+
+	Ici, posValid va s'exécuté N fois jusqu'à rencontrer une condition externe ...
+
+	exemple : if (pos == 81)
+					return (1);
+
+	...  cloturant la Nième fonction qui va POP de la stack (==sortir)
+	et ainsi de suite pour remonter toute la stack (composée de N fonction posValid)
+	 jusqu'à main() et retourner (1)
+
+
+

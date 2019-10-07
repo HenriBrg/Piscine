@@ -1,0 +1,44 @@
+Notions principales : 
+
+Structure : Groupe de variable relies entre elle
+Malloc : Allouer de la memoire quqnd on connait pas la taille d'avance
+Fichiers : Open - Read
+
+Deroule du programme :
+
+
+1 - main.c
+
+- Check si valide
+- Allocation du tableau de structures
+- Fill le tableau
+
+
+2 - Convert.c
+
+- Rempli les triplets non plein
+- On creer un tableau avec chaque triplet dedans
+
+	2.1 Handle Triplet un a un dans une boucle
+
+	T1
+
+	On skip les '0'
+	On gerer le cas d'exception avec un triplet tel que 001 ou 009
+	On arrive dans la boucle
+		T1 : On gere la centaine en cherchant dans le tableau de structure
+		T2 : On gerer les dizaine puis l'unite
+	On gere les relations entre les triplets
+	On gere les espaces
+	
+	T2
+
+	On skip les '0'
+	On gerer le cas d'exception avec un triplet tel que 001 ou 009
+	On arrive dans la boucle
+		T1 : On gere la centaine en cherchant dans le tableau de structure
+		T2 : On gerer les dizaine puis l'unite
+	
+
+
+	... chqaue triplet genere un tour de boucle
